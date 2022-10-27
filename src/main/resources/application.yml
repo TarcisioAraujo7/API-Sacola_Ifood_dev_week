@@ -1,0 +1,19 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      console.settings.trace: false
+      spring.h2.console.settings.web-allow-others: false
+  datasource:
+    url: jdbc:h2:mem:testedb
+    username: tata
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
